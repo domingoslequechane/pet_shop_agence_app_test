@@ -1,16 +1,11 @@
 # pet_shop_agence_app_test
 
-A new Flutter project.
+Test application for job opportunity at Agence
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Layouts
+<div>
+  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/splash.png" alt="Splash"/>
+  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/loginPage.png" alt="Login"/>
+  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/home.png" alt="Home"/>
+  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/description.png" alt="Product Information"/>
+</div>

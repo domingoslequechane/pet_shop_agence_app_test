@@ -23,7 +23,5 @@ As I write this excerpt from the README, I have just sent my application to recr
   <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/description.png" alt="Product Information" width="400"/>
 </div>
 
-# Todo
 
-Linkedin: https://www.linkedin.com/in/domingos-lequechane/
 

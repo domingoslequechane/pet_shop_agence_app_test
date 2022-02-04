@@ -1,16 +1,27 @@
-# pet_shop_agence_app_test
+# Agence Test App
+<div>
+  <a href="https://flutter.dev/" target="_blank">
+    <img [Tinder App Layout] src="https://github.com/flutter/website/raw/archived-master/src/_assets/image/flutter-lockup-bg.jpg"/>
+  </a>
+</div>
 
-A new Flutter project.
+# About
+Test application for job opportunity at Agence
+I recently applied for a position as a Junior Mobile Developer at Agence. I went through the selection process that contained two stages, the first was logical reasoning and the second was a test focused on the world of flutter development.
 
-## Getting Started
+My results in the first stage were satisfactory, which conditioned me to perform the last stage before the interview. It was really good, it was intense.
 
-This project is a starting point for a Flutter application.
+I was supposed to develop it in 15 hours, but it was much more than that, a challenge for me as a beginner.
 
-A few resources to get you started if this is your first Flutter project:
+As I write this excerpt from the README, I have just sent my application to recruiters. It's not complete, I did something simple, which for someone who is already a professional in the area would take much less time. I am very proud of this project, it was very challenging.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Layouts
+<div>
+  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/splash.png" alt="Splash" width="400"/>
+  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/loginPage.png" alt="Login" width="400"/>
+  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/home.png" alt="Home" width="400"/>
+  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/description.png" alt="Product Information" width="400"/>
+</div>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+

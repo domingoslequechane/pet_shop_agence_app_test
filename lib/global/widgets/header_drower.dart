@@ -15,7 +15,7 @@ class _HeaderDrowerState extends State<HeaderDrower> {
       //* Drower header card
       padding: const EdgeInsets.only(top: 25),
       width: double.infinity,
-      color: Colors.white,
+      color: Theme.of(context).backgroundColor,
       height: 250,
       child: Column(
         children: [

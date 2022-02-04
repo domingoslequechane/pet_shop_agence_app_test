@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_shop_agence_app_test/screens/error/erro_page.dart';
 import 'package:pet_shop_agence_app_test/screens/home/home_page.dart';
 import 'package:pet_shop_agence_app_test/screens/login/login_page.dart';
 import 'package:pet_shop_agence_app_test/screens/perfil/perfil_page.dart';
@@ -14,24 +15,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
-      create: (context) => GooleSignInProvider(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          textTheme:
-              Theme.of(context).textTheme.apply(bodyColor: AppColors.normal),
-          backgroundColor: Colors.white,
-          primaryColor: AppColors.normal,
+        create: (context) => GooleSignInProvider(),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            textTheme:
+                Theme.of(context).textTheme.apply(bodyColor: AppColors.normal),
+            backgroundColor: Colors.white,
+            primaryColor: AppColors.normal,
+          ),
+          // home: const HomePage(),
+          initialRoute: '/splash',
+          routes: {
+            '/splash': (context) => const SplashPage(),
+            '/login': (context) => const LoginPage(),
+            '/home': (context) => const HomePage(),
+            '/perfil': (context) => const PerfilPage(),
+            '/myproducts': (context) => const MyProductPage(),
+            '/settings': (context) => const SettingPage(),
+            '/validation': (context) => const ErrorPage(),
+          },
         ),
-        // home: SecondPage(),
-        initialRoute: '/splash',
-        routes: {
-          '/splash': (context) => const SplashPage(),
-          '/login': (context) => const LoginPage(),
-          '/home': (context) => const HomePage(),
-          '/perfil': (context) => const PerfilPage(),
-          '/myproducts': (context) => const MyProductPage(),
-          '/settings': (context) => const SettingPage(),
-        },
-      ));
+      );
 }

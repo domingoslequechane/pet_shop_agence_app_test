@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/font_.dart';
 
 class passwordInputField extends StatefulWidget {
@@ -12,14 +13,17 @@ class passwordInputField extends StatefulWidget {
 
 class _passwordInputFieldState extends State<passwordInputField> {
   bool obscureText = true;
+  bool password = false;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      //* Propriety
+      obscureText: obscureText,
+      keyboardType: TextInputType.text,
+
       //* Decoration
       decoration: InputDecoration(
-        filled: true,
-
         //* Icons
         suffixIcon: IconButton(
           onPressed: () {
@@ -27,7 +31,7 @@ class _passwordInputFieldState extends State<passwordInputField> {
               obscureText = !obscureText;
             });
           },
-          icon: const Icon(Icons.remove_red_eye),
+          icon: obscureText ? isObscured() : isntObscured(),
         ),
 
         border: const OutlineInputBorder(
@@ -48,10 +52,9 @@ class _passwordInputFieldState extends State<passwordInputField> {
           fontSize: 16,
         ),
       ),
-
-      //* Propriety
-      obscureText: obscureText,
-      keyboardType: TextInputType.text,
     );
   }
+
+  FaIcon isntObscured() => const FaIcon(FontAwesomeIcons.eye, size: 18);
+  FaIcon isObscured() => const FaIcon(FontAwesomeIcons.eyeSlash, size: 18);
 }

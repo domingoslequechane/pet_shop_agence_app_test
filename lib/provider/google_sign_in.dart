@@ -17,23 +17,28 @@ class GooleSignInProvider extends ChangeNotifier {
       if (googleUser == null) return;
       _user = googleUser;
 
-      final gooleAuth = await googleUser.authentication;
+      final googleAuth = await googleUser.authentication;
 
       final credential = GoogleAuthProvider.credential(
-        accessToken: gooleAuth.accessToken,
-        idToken: gooleAuth.idToken,
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
       );
 
       await FirebaseAuth.instance.signInWithCredential(credential);
     } catch (e) {
-      print(e.toString());
+      // print(e.toString());
     }
 
     notifyListeners();
   }
 
   Future logout() async {
-    await googleSignIn.disconnect();
-    FirebaseAuth.instance.signOut();
+    try {
+      await googleSignIn.disconnect();
+      FirebaseAuth.instance.signOut();
+    } catch (e) {
+      print(e);
+      print('Google account not connected!');
+    }
   }
 }

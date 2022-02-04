@@ -17,9 +17,12 @@ Widget googleLoginButton(BuildContext context) {
     ),
 
     //* Click action
-    onPressed: () {
+    onPressed: () async {
       final provider = Provider.of<GooleSignInProvider>(context, listen: false);
-      provider.googleLogin();
+
+      await provider.googleLogin();
+
+      Navigator.of(context).pushNamed('/validation');
     },
 
     //* Icon

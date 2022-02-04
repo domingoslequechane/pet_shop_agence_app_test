@@ -58,7 +58,13 @@ class _BuyButtonState extends State<BuyButton> {
                 ),
                 TextButton(
                   onPressed: () {
+                    // Navigator.pop(context);
                     Navigator.of(context).pushReplacementNamed('/home');
+
+                    const snackBar = SnackBar(
+                      content: Text('Compra realizada com sucesso!'),
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   },
                   child: const Text(
                     'Sim',

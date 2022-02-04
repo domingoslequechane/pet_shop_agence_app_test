@@ -1,13 +1,15 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:pet_shop_agence_app_test/model/pet.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/app_colors.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/app_images.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/font_.dart';
 
 class PetThumbnail extends StatelessWidget {
-  const PetThumbnail({
-    Key? key,
-  }) : super(key: key);
+  const PetThumbnail({Key? key, required this.pet}) : super(key: key);
+
+  final Pet pet;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -41,25 +43,20 @@ class PetThumbnail extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: [
-                        //* Title
-                        Text(
-                          "Titulo",
-                          style: TextStyle(
-                            color: Theme.of(context).backgroundColor,
-                            fontFamily: AppFont.font,
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
+                    AutoSizeText(
+                      pet.title,
+                      style: TextStyle(
+                        color: Theme.of(context).backgroundColor,
+                        fontFamily: AppFont.font,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     const SizedBox(height: 3),
 
                     //* Description
                     AutoSizeText(
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec augue id nisi fringilla sodales. Sed imperdiet erat quis tempor ultricies. Maecenas viverra egestas consequat. Morbi eu est purus. Suspendisse eleifend ligula quis augue consectetur mattis. Donec gravida tortor orci, at posuere nulla pulvinar ac. Sed tristique, sem at malesuada vehicula, velit orci rutrum libero, in auctor dolor ipsum quis dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. In hac habitasse platea dictumst. Nullam consequat ut sem sed volutpat.',
+                      pet.description,
                       style: TextStyle(
                         color: Colors.grey[200],
                         fontFamily: AppFont.font,
@@ -68,7 +65,7 @@ class PetThumbnail extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

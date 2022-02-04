@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_shop_agence_app_test/shared/theme/app_colors.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/font_.dart';
 
 import 'widgets/create_account_button.dart';
@@ -48,16 +49,16 @@ Center buildHome(BuildContext context) {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //* Text
-              const Text(
+              Text(
                 'Login',
                 style: TextStyle(
                   fontFamily: AppFont.font,
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xff222222),
+                  color: AppColors.normal,
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 30),
 
               //* Fields
               userInputField(),

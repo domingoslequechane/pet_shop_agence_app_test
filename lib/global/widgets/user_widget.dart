@@ -6,16 +6,20 @@ class User extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
-      margin: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: Theme.of(context).backgroundColor,
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Image.asset(
-        AppImages.logo,
-        width: 30,
+    return GestureDetector(
+      onTap: () => Navigator.of(context).pushNamed('/perfil'),
+      child: Padding(
+        padding: const EdgeInsets.only(right: 20, top: 14, bottom: 14),
+        child: Container(
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            image: const DecorationImage(
+              // Demostration user
+              image: AssetImage(AppImages.demoUserPicture),
+            ),
+          ),
+        ),
       ),
     );
   }

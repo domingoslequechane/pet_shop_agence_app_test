@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:pet_shop_agence_app_test/model/pet.dart';
 import 'package:pet_shop_agence_app_test/screens/detail/pet_detail_page.dart';
-import 'package:pet_shop_agence_app_test/shared/theme/app_colors.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/font_.dart';
 
-class PetItem extends StatelessWidget {
+class PetItem extends StatefulWidget {
   final Pet pet;
-  const PetItem(this.pet, {Key? key}) : super(key: key);
+  final Function press;
+  const PetItem(this.pet, {Key? key, required this.press}) : super(key: key);
 
+  @override
+  State<PetItem> createState() => _PetItemState();
+}
+
+class _PetItemState extends State<PetItem> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -16,9 +21,7 @@ class PetItem extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => PetDetailPage(
-              pet: pet.title,
-            ),
+            builder: (context) => PetDetailPage(pet: widget.pet),
           ),
         );
       },
@@ -31,11 +34,10 @@ class PetItem extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           image: DecorationImage(
-            image: AssetImage(pet.image),
+            image: AssetImage(widget.pet.image),
             fit: BoxFit.cover,
           ),
         ),
-
         //* Item title
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -44,12 +46,12 @@ class PetItem extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                pet.title,
-                style: TextStyle(
-                  color: AppColors.normal,
+                widget.pet.title,
+                style: const TextStyle(
+                  color: Colors.white,
                   fontFamily: AppFont.font,
                   fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                  fontSize: 16,
                 ),
               ),
             ],
@@ -59,6 +61,3 @@ class PetItem extends StatelessWidget {
     );
   }
 }
-
-
-// pet: pet.title

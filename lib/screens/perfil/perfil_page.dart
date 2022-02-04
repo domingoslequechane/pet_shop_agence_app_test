@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_shop_agence_app_test/global/widgets/drower_list.dart';
 import 'package:pet_shop_agence_app_test/global/widgets/header_drower.dart';
-import 'package:pet_shop_agence_app_test/global/widgets/user_widget.dart';
+import 'package:pet_shop_agence_app_test/screens/perfil/widgets/perfil_user_widget.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/app_colors.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/font_.dart';
 
@@ -74,7 +74,7 @@ AppBar buildAppBar(BuildContext context) {
 
     //* User icon action
     actions: const [
-      User(),
+      UserWithoutDetector(),
     ],
   );
 }

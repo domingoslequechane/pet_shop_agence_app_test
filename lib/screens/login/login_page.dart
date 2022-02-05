@@ -78,7 +78,8 @@ Center buildHome(BuildContext context) {
                   //* Facebook
                   SizedBox(
                     width: MediaQuery.of(context).size.width / 2.6,
-                    child: facebookLoginButton(), // Login with Facebook button
+                    child:
+                        const FacebookLoginButton(), // Login with Facebook button
                   ),
                   const SizedBox(width: 10),
 

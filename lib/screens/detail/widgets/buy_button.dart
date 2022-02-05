@@ -28,13 +28,15 @@ class _BuyButtonState extends State<BuyButton> {
             context: context,
             builder: (BuildContext context) => AlertDialog(
               elevation: 24,
-              title: const Text('Confirmação',
-                  style: TextStyle(
-                    color: Color(0xff222222),
-                    fontSize: 22,
-                    fontFamily: AppFont.font,
-                    fontWeight: FontWeight.w600,
-                  )),
+              title: const Text(
+                'Confirmação',
+                style: TextStyle(
+                  color: Color(0xff222222),
+                  fontSize: 22,
+                  fontFamily: AppFont.font,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
               content: const Text('Deseja efectuar esta compra?',
                   style: TextStyle(
                     color: Color(0xff222222),

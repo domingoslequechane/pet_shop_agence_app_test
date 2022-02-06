@@ -22,11 +22,12 @@ class MotivationWidget extends StatelessWidget {
         Text(
           'Fazem bem!',
           style: TextStyle(
-              color: Color(0xff222222),
-              fontSize: 28,
-              fontFamily: AppFont.font,
-              fontWeight: FontWeight.bold),
-        )
+            color: Color(0xff222222),
+            fontSize: 28,
+            fontFamily: AppFont.font,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ],
     );
   }

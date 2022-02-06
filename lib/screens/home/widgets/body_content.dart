@@ -14,6 +14,8 @@ class BodyContent extends StatefulWidget {
 class _BodyContentState extends State<BodyContent> {
   late bool _isLoading;
   @override
+
+  //* Timer to show Pet GridView
   void initState() {
     _isLoading = true;
     Future.delayed(
@@ -52,6 +54,7 @@ class _BodyContentState extends State<BodyContent> {
   }
 }
 
+//* Progress indicator
 class ProgressIndicator extends StatelessWidget {
   const ProgressIndicator({
     Key? key,

@@ -17,6 +17,8 @@ class _ErrorPageState extends State<ErrorPage> {
       backgroundColor: Theme.of(context).backgroundColor,
       body: StreamBuilder(
         stream: FirebaseAuth.instance.authStateChanges(),
+
+        //* GoogleAuth route setting
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());

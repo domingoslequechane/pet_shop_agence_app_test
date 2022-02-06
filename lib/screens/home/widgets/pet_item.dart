@@ -5,8 +5,7 @@ import 'package:pet_shop_agence_app_test/shared/theme/font_.dart';
 
 class PetItem extends StatefulWidget {
   final Pet pet;
-  final Function press;
-  const PetItem(this.pet, {Key? key, required this.press}) : super(key: key);
+  const PetItem(this.pet, {Key? key}) : super(key: key);
 
   @override
   State<PetItem> createState() => _PetItemState();
@@ -38,6 +37,7 @@ class _PetItemState extends State<PetItem> {
             fit: BoxFit.cover,
           ),
         ),
+
         //* Item title
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),

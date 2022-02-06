@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:pet_shop_agence_app_test/provider/facebook_sign_in.dart';
 import 'package:pet_shop_agence_app_test/screens/login/login_page.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/font_.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
@@ -13,8 +12,7 @@ class FacebookLoginButton extends StatefulWidget {
 }
 
 class _FacebookLoginButtonState extends State<FacebookLoginButton> {
-  static const FacebookLoginAuth facebookLogIn = FacebookLoginAuth();
-
+  //* Facebook Login
   Future<void> _login() async {
     try {
       final result =
@@ -76,6 +74,7 @@ class _FacebookLoginButtonState extends State<FacebookLoginButton> {
           );
       }
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }

@@ -9,5 +9,4 @@ class AppImages {
   static const pet07 = "assets/images/pet07.jpg";
   static const pet08 = "assets/images/pet08.jpg";
   static const demoUserPicture = "assets/images/userPicture.jpg";
-  static const background = "assets/images/login_background_image.png";
 }

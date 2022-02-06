@@ -11,6 +11,7 @@ class GooleSignInProvider extends ChangeNotifier {
 
   GoogleSignInAccount get user => _user!;
 
+  //* Google Login
   Future googleLogin() async {
     try {
       final googleUser = await googleSignIn.signIn();
@@ -32,6 +33,7 @@ class GooleSignInProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  //* Google Logout
   Future logout() async {
     try {
       await googleSignIn.disconnect();

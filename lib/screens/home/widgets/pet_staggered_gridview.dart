@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pet_shop_agence_app_test/model/pet.dart';
-import 'package:pet_shop_agence_app_test/screens/detail/pet_detail_page.dart';
+import 'package:pet_shop_agence_app_test/data/pet_data.dart';
 import 'package:pet_shop_agence_app_test/screens/home/widgets/pet_item.dart';
 
 class PetGridView extends StatefulWidget {
@@ -11,9 +10,12 @@ class PetGridView extends StatefulWidget {
 }
 
 class _PetGridViewState extends State<PetGridView> {
+  final pets = PetData.table;
+
   final ScrollController _scrollController = ScrollController();
   int currentMaxItem = 10;
 
+  //* Lazy loading setting
   @override
   void initState() {
     super.initState();
@@ -25,6 +27,7 @@ class _PetGridViewState extends State<PetGridView> {
     });
   }
 
+  //* Set state lazy new itens
   _getMoreItems() {
     setState(() {
       if (currentMaxItem + 10 <= pets.length) {
@@ -47,16 +50,8 @@ class _PetGridViewState extends State<PetGridView> {
         crossAxisSpacing: 18,
       ),
       itemCount: currentMaxItem,
-      itemBuilder: (context, index) => PetItem(
-        pets[index],
-        press: () => Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => PetDetailPage(
-              pet: pets[index],
-            ),
-          ),
-        ),
+      itemBuilder: (context, int petIndex) => PetItem(
+        pets[petIndex],
       ),
     );
   }

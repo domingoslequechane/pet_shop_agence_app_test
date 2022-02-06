@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/app_colors.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/font_.dart';
@@ -24,63 +26,7 @@ class _BuyButtonState extends State<BuyButton> {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10))),
         onPressed: () {
-          showDialog(
-            context: context,
-            builder: (BuildContext context) => AlertDialog(
-              elevation: 24,
-              title: const Text(
-                'Confirmação',
-                style: TextStyle(
-                  color: Color(0xff222222),
-                  fontSize: 22,
-                  fontFamily: AppFont.font,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              content: const Text('Deseja efectuar esta compra?',
-                  style: TextStyle(
-                    color: Color(0xff222222),
-                    fontSize: 18,
-                    fontFamily: AppFont.font,
-                  )),
-              actions: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: const Text(
-                    'Não',
-                    style: TextStyle(
-                      color: Color(0xff222222),
-                      fontSize: 18,
-                      fontFamily: AppFont.font,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Navigator.pop(context);
-                    Navigator.of(context).pushReplacementNamed('/home');
-
-                    const snackBar = SnackBar(
-                      content: Text('Compra realizada com sucesso!'),
-                    );
-                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                  },
-                  child: const Text(
-                    'Sim',
-                    style: TextStyle(
-                      color: Color(0xffFF8A00),
-                      fontSize: 18,
-                      fontFamily: AppFont.font,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          );
+          confirmationDialog(context);
         },
 
         //* Text button
@@ -94,4 +40,75 @@ class _BuyButtonState extends State<BuyButton> {
       ),
     );
   }
+}
+
+//* Confirmation dialog
+Future<dynamic> confirmationDialog(BuildContext context) {
+  Future<void> _showSnackBar() async {
+    Timer(
+      const Duration(seconds: 1),
+      () {
+        const snackBar = SnackBar(
+          content: Text('Compra realizada com sucesso!'),
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      },
+    );
+  }
+
+  return showDialog(
+    context: context,
+    builder: (BuildContext context) => AlertDialog(
+      elevation: 24,
+      title: const Text(
+        'Confirmação',
+        style: TextStyle(
+          color: Color(0xff222222),
+          fontSize: 22,
+          fontFamily: AppFont.font,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+      content: const Text(
+        'Deseja efectuar esta compra?',
+        style: TextStyle(
+          color: Color(0xff222222),
+          fontSize: 18,
+          fontFamily: AppFont.font,
+        ),
+      ),
+      actions: [
+        TextButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text(
+            'Não',
+            style: TextStyle(
+              color: Color(0xff222222),
+              fontSize: 18,
+              fontFamily: AppFont.font,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        TextButton(
+          onPressed: () {
+            // Navigator.pop(context);
+            Navigator.of(context).pushReplacementNamed('/home');
+            _showSnackBar();
+          },
+          child: const Text(
+            'Sim',
+            style: TextStyle(
+              color: Color(0xffFF8A00),
+              fontSize: 18,
+              fontFamily: AppFont.font,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
 }

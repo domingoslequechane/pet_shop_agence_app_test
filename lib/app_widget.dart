@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.white,
             primaryColor: AppColors.normal,
           ),
-          // home: const HomePage(),
+
+          //* Page route
           initialRoute: '/splash',
           routes: {
             '/splash': (context) => const SplashPage(),

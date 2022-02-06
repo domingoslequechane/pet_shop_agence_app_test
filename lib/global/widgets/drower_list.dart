@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_string_interpolations
 
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/app_colors.dart';
 import 'package:provider/provider.dart';
 import 'package:pet_shop_agence_app_test/provider/google_sign_in.dart';
@@ -34,17 +35,15 @@ class _DrowerListState extends State<DrowerList> {
     );
   }
 
-  // Widget menuItem2(int id) {
-  //   return Material(
-  //     child: InkWell(
-  //       onTap: () {
-  //         final provider =
-  //             Provider.of<GooleSignInProvider>(context, listen: false);
-  //         provider.googleLogin();
-  //       },
-  //     ),
-  //   );
-  // }
+  //* Facebook logout
+  Future<void> _logOut() async {
+    try {
+      await FacebookAuth.i.logOut();
+    } catch (e) {
+      // ignore: avoid_print
+      print(e);
+    }
+  }
 
   //* Drower menu constructor
   Widget menuItem(
@@ -59,6 +58,7 @@ class _DrowerListState extends State<DrowerList> {
           //* If the id selected
           if (id == 4) {
             provider.logout();
+            _logOut();
           }
         },
         child: Padding(

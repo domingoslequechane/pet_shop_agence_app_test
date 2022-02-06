@@ -22,6 +22,8 @@ Widget googleLoginButton(BuildContext context) {
 
       await provider.googleLogin();
 
+      const CircularProgressIndicator();
+
       Navigator.of(context).pushNamed('/validation');
     },
 
@@ -30,6 +32,7 @@ Widget googleLoginButton(BuildContext context) {
       FontAwesomeIcons.google,
       size: 20,
     ),
+
     //* Text
     label: const Text(
       'Google',

@@ -1,9 +1,9 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_shop_agence_app_test/global/widgets/user_widget.dart';
 import 'package:pet_shop_agence_app_test/model/pet.dart';
 import 'package:pet_shop_agence_app_test/global/widgets/drower_list.dart';
 import 'package:pet_shop_agence_app_test/global/widgets/header_drower.dart';
-import 'package:pet_shop_agence_app_test/screens/detail/widgets/thumbnail.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/app_colors.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/font_.dart';
 
@@ -26,7 +26,80 @@ class _PetDetailPageState extends State<PetDetailPage> {
       backgroundColor: Theme.of(context).backgroundColor,
       drawer: buildDower(),
       appBar: buildAppBar(context),
-      body: buildHome(context),
+      body: ListView(
+        padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 0),
+        children: [
+          //* Widgets
+          const GoogleMap(),
+          const SizedBox(height: 15),
+          thumbNail(context),
+          const SizedBox(height: 15),
+          const BuyButton(),
+        ],
+      ),
+    );
+  }
+
+  //* Extracted method
+  Column thumbNail(BuildContext context) {
+    return Column(
+      children: [
+        //* Thumbnail card
+        Container(
+          width: MediaQuery.of(context).size.width,
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+          decoration: BoxDecoration(
+            color: AppColors.normal,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Column(
+            children: [
+              //* Pet image
+              Container(
+                height: 350,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(widget.pet.image),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+
+              //* Pet description
+              Container(
+                padding: const EdgeInsets.only(top: 10),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    AutoSizeText(
+                      widget.pet.title,
+                      style: TextStyle(
+                        color: Theme.of(context).backgroundColor,
+                        fontFamily: AppFont.font,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 3),
+
+                    //* Description
+                    AutoSizeText(
+                      widget.pet.description,
+                      style: TextStyle(
+                        color: Colors.grey[200],
+                        fontFamily: AppFont.font,
+                        fontSize: 18,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
@@ -80,23 +153,6 @@ AppBar buildAppBar(BuildContext context) {
     //* User icon action
     actions: const [
       User(),
-    ],
-  );
-}
-
-//* Home metod
-ListView buildHome(BuildContext context) {
-  return ListView(
-    padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 0),
-    children: [
-      //* Widgets
-      const GoogleMap(),
-      const SizedBox(height: 15),
-      PetThumbnail(
-        pet: pets[0],
-      ),
-      const SizedBox(height: 15),
-      const BuyButton(),
     ],
   );
 }

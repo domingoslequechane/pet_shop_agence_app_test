@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_shop_agence_app_test/model/pet.dart';
 import 'package:pet_shop_agence_app_test/screens/detail/pet_detail_page.dart';
+import 'package:pet_shop_agence_app_test/shared/theme/app_colors.dart';
 import 'package:pet_shop_agence_app_test/shared/theme/font_.dart';
 
 class PetItem extends StatefulWidget {
@@ -31,7 +32,7 @@ class _PetItemState extends State<PetItem> {
 
         //* Item image
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(16),
           image: DecorationImage(
             image: AssetImage(widget.pet.image),
             fit: BoxFit.cover,
@@ -39,22 +40,32 @@ class _PetItemState extends State<PetItem> {
         ),
 
         //* Item title
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                widget.pet.title,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontFamily: AppFont.font,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
+        child: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: AppColors.normal.withOpacity(0.75),
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(16),
+              bottomRight: Radius.circular(16),
+            ),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  widget.pet.title,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontFamily: AppFont.font,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

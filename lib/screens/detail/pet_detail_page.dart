@@ -54,47 +54,52 @@ class _PetDetailPageState extends State<PetDetailPage> {
           ),
           child: Column(
             children: [
-              //* Pet image
-              Container(
-                height: 350,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(widget.pet.image),
-                    fit: BoxFit.cover,
+              Row(
+                children: [
+                  //* Pet image
+                  Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(widget.pet.image),
+                        fit: BoxFit.cover,
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                   ),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
+                  //* Pet description
+                  Container(
+                    margin: const EdgeInsets.only(left: 12),
+                    width: 185,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AutoSizeText(
+                          widget.pet.title,
+                          style: TextStyle(
+                            color: Theme.of(context).backgroundColor,
+                            fontFamily: AppFont.font,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 3),
 
-              //* Pet description
-              Container(
-                padding: const EdgeInsets.only(top: 10),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    AutoSizeText(
-                      widget.pet.title,
-                      style: TextStyle(
-                        color: Theme.of(context).backgroundColor,
-                        fontFamily: AppFont.font,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                      ),
+                        //* Description
+                        AutoSizeText(
+                          widget.pet.description,
+                          style: TextStyle(
+                            color: Colors.grey[200],
+                            fontFamily: AppFont.font,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 3),
-
-                    //* Description
-                    AutoSizeText(
-                      widget.pet.description,
-                      style: TextStyle(
-                        color: Colors.grey[200],
-                        fontFamily: AppFont.font,
-                        fontSize: 18,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),

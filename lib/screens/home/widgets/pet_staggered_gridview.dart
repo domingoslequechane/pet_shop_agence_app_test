@@ -48,6 +48,7 @@ class _PetGridViewState extends State<PetGridView> {
         crossAxisCount: 2,
         mainAxisSpacing: 18,
         crossAxisSpacing: 18,
+        // childAspectRatio: 0.75,
       ),
       itemCount: currentMaxItem,
       itemBuilder: (context, int petIndex) => PetItem(

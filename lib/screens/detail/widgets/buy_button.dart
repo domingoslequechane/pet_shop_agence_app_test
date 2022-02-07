@@ -49,7 +49,7 @@ Future<dynamic> confirmationDialog(BuildContext context) {
       const Duration(seconds: 1),
       () {
         const snackBar = SnackBar(
-          content: Text('Compra realizada com sucesso!'),
+          content: Text('Pet aquirido com sucesso!\nJa ja ele chega ate você'),
         );
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
       },
@@ -70,7 +70,7 @@ Future<dynamic> confirmationDialog(BuildContext context) {
         ),
       ),
       content: const Text(
-        'Deseja efectuar esta compra?',
+        'Deseja ficar com este Pet?',
         style: TextStyle(
           color: Color(0xff222222),
           fontSize: 18,

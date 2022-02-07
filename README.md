@@ -1,7 +1,7 @@
 # Agence Test App
 <div>
   <a href="https://flutter.dev/" target="_blank">
-    <img [Tinder App Layout] src="https://github.com/flutter/website/raw/archived-master/src/_assets/image/flutter-lockup-bg.jpg"/>
+    <img [Tinder App Layout] src="https://github.com/flutter/website/raw/archived-master/src/_assets/image/flutter-lockup-bg.jpg" width="400"/>
   </a>
 </div>
 
@@ -17,10 +17,10 @@ As I write this excerpt from the README, I have just sent my application to recr
 
 # Layouts
 <div>
-  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/splash.png" alt="Splash" width="400"/>
-  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/loginPage.png" alt="Login" width="400"/>
-  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/home.png" alt="Home" width="400"/>
-  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/description.png" alt="Product Information" width="400"/>
+  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/splash.png" alt="Splash" width="300"/>
+  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/loginPage.png" alt="Login" width="300"/>
+  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/home.png" alt="Home" width="300"/>
+  <img src="https://github.com/domingoslequechane/pet_shop_agence_app_test/blob/master/layout/description.png" alt="Product Information" width="300"/>
 </div>
 
 

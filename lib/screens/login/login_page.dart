@@ -76,18 +76,21 @@ Center buildHome(BuildContext context) {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   //* Facebook
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width / 2.6,
-                    child:
-                        const FacebookLoginButton(), // Login with Facebook button
+                  const Expanded(
+                    child: SizedBox(
+                      child:
+                          FacebookLoginButton(), // Login with Facebook button
+                    ),
                   ),
+
                   const SizedBox(width: 10),
 
                   //* Google
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width / 2.6,
-                    child:
-                        googleLoginButton(context), // Login with Goole button
+                  Expanded(
+                    child: SizedBox(
+                      child:
+                          googleLoginButton(context), // Login with Goole button
+                    ),
                   ),
                 ],
               ),

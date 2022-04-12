@@ -57,21 +57,22 @@ class _PetDetailPageState extends State<PetDetailPage> {
               Row(
                 children: [
                   //* Pet image
-                  Container(
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(widget.pet.image),
-                        fit: BoxFit.cover,
+                  Expanded(
+                    child: Container(
+                      height: 120,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(widget.pet.image),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                      borderRadius: BorderRadius.circular(10),
                     ),
                   ),
                   //* Pet description
                   Container(
                     margin: const EdgeInsets.only(left: 12),
-                    width: 185,
+                    width: 160,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -85,7 +86,7 @@ class _PetDetailPageState extends State<PetDetailPage> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        const SizedBox(height: 3),
+                        const SizedBox(height: 5),
 
                         //* Description
                         AutoSizeText(
@@ -93,7 +94,7 @@ class _PetDetailPageState extends State<PetDetailPage> {
                           style: TextStyle(
                             color: Colors.grey[200],
                             fontFamily: AppFont.font,
-                            fontSize: 16,
+                            // fontSize: 16,
                           ),
                         ),
                       ],

@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/values-en-rXC/values-en-rXC.xml",
+            "map": [
+                {
+                    "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/bf836ebc3c64c4dbe8b6c72a7b58275d/core-1.6.0/res/values-en-rXC/values-en-rXC.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "203",
+                        "endOffsets": "254"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml",
+            "map": [
+                {
+                    "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/bf836ebc3c64c4dbe8b6c72a7b58275d/core-1.6.0/res/values-en-rXC/values-en-rXC.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "203",
+                        "endOffsets": "254"
+                    }
+                }
+            ]
+        }
+    ]
+}

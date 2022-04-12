@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
+        "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/a6e1bafd673a2b6e865d8a81df043cb2/jetified-play-services-auth-20.0.1/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/a6e1bafd673a2b6e865d8a81df043cb2/jetified-play-services-auth-20.0.1/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
+        "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/a6e1bafd673a2b6e865d8a81df043cb2/jetified-play-services-auth-20.0.1/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
+    }
+]

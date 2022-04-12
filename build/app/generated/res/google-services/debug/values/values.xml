@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">304013429348-l54gube3sa8nlphgh87m69oght9r0arb.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">304013429348</string>
+    <string name="google_api_key" translatable="false">AIzaSyCu6wBm7Tex08XRQ9BHTWjkv1uULJauk-Y</string>
+    <string name="google_app_id" translatable="false">1:304013429348:android:2822f28fb0436761a3ed71</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCu6wBm7Tex08XRQ9BHTWjkv1uULJauk-Y</string>
+    <string name="google_storage_bucket" translatable="false">pet-shop-app-61bba.appspot.com</string>
+    <string name="project_id" translatable="false">pet-shop-app-61bba</string>
+</resources>

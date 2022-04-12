@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
+        "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/bf836ebc3c64c4dbe8b6c72a7b58275d/core-1.6.0/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
+        "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/bf836ebc3c64c4dbe8b6c72a7b58275d/core-1.6.0/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/bf836ebc3c64c4dbe8b6c72a7b58275d/core-1.6.0/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/layout/notification_action.xml",
+        "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/bf836ebc3c64c4dbe8b6c72a7b58275d/core-1.6.0/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/layout/custom_dialog.xml",
+        "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/bf836ebc3c64c4dbe8b6c72a7b58275d/core-1.6.0/res/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/bf836ebc3c64c4dbe8b6c72a7b58275d/core-1.6.0/res/layout/notification_template_part_time.xml"
+    }
+]

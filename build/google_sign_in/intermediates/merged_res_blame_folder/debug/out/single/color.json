@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/a2df426ca9b07dffb0f46311462ae1d8/jetified-play-services-base-18.0.1/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
+        "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/a2df426ca9b07dffb0f46311462ae1d8/jetified-play-services-base-18.0.1/res/color/common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "/home/lequechane/projects/mobile/android/pet_shop_agence_app_test/build/google_sign_in/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/home/lequechane/.gradle/caches/transforms-2/files-2.1/a2df426ca9b07dffb0f46311462ae1d8/jetified-play-services-base-18.0.1/res/color/common_google_signin_btn_text_dark.xml"
+    }
+]
